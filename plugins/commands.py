@@ -14,7 +14,9 @@ async def text(c, m):
          if m.text == Config.PASS:
             Config.LOGIN.remove(m.from_user.id)
             Config.OWNER.append(m.from_user.id)
-            await m.reply_text(text="From now you will receive feedbacks. Untill this bot restart.  If you want to get feedbacks permanently add your id in config vars")
+            await m.reply_text(text="From now you will receive feedbacks. Untill this bot restart.  If you want to get feedbacks permanently add your id in @groupdc ")
+
+
          if m.text != Config.PASS:
             Config.LOGIN.remove(m.from_user.id)
             await m.reply_text(text="**Incorrect Password ⚠️**", parse_mode="markdown")
